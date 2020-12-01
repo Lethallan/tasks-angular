@@ -9,8 +9,13 @@ export class CardComponent {
   title = 'Title'
   text = 'Home is behind, the world ahead'
 
-  inputHandler(event: any) {
-    const value = event.target.value
+  textColor: string
+
+  inputHandler(value) {
     this.title = value
+  }
+
+  changeHandler() {
+    console.log(this.title)
   }
 }

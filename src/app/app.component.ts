@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'tasks-angular';
+  toggle = true
+
+  toggleCards() {
+    this.toggle = !this.toggle
+  }
 }

@@ -1,8 +1,21 @@
 <div class="card">
-  <h2>{{title}}</h2>
-  <p>{{text}}</p>
+  <h2 [ngStyle]="{
+    color: title.length < 5 ? 'green' : 'blue',
+    fontWeight: title.length > 10 ? 'normal' : 'bold'
+  }">{{title}}</h2>
+  <p class="text" [ngClass]="{
+    blue: textColor === 'blue',
+    red: textColor === 'red',
+    green: textColor === 'green'
+  }">{{text}}</p>
+
+<div class="buttons">
+  <button (click)="textColor = 'blue'">Set Blue</button>
+  <button (click)="textColor = 'red'">Set Red</button>
+  <button (click)="textColor = 'green'">Set Green</button>
+</div>
 
   <div>
-    <input type="text" (input)="inputHandler($event)" [value]="title">
+    <input type="text" [(ngModel)]="title" (ngModelChange)="changeHandler()">
   </div>
 </div>
