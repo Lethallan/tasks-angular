@@ -5,4 +5,8 @@ import {Component} from '@angular/core';
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })
-export class CardComponent {}
+export class CardComponent {
+  title = 'New Title'
+  text = 'Home is behind, the world ahead'
+  number = '42'
+}

@@ -3,10 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
-    AppComponent, CardComponent
+    AppComponent, CardComponent, FormComponent
   ],
   imports: [
     BrowserModule
