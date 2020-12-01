@@ -1,10 +1,8 @@
 <div class="card">
   <h2>{{title}}</h2>
   <p>{{text}}</p>
-  <p>Info: {{getInfo()}}</p>
-  Number: {{number}}
+
   <div>
-    <img [src]="imgUrl">
-    <button>Click</button>
+    <input type="text" (input)="inputHandler($event)" [value]="title">
   </div>
 </div>

@@ -6,11 +6,11 @@ import {Component} from '@angular/core';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
-  title = 'New Title'
+  title = 'Title'
   text = 'Home is behind, the world ahead'
-  number = '42'
 
-  imgUrl = 'https://i.ebayimg.com/images/g/IlUAAOSwBPlc~NtR/s-l300.jpg'
-
-  getInfo(): string { return 'whoooooa' }
+  inputHandler(event: any) {
+    const value = event.target.value
+    this.title = value
+  }
 }
