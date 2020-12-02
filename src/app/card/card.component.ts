@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {Card} from '../app.component';
 
 @Component({
   selector: 'app-card',
@@ -6,13 +7,15 @@ import {Component} from '@angular/core';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
+  @Input() card: Card
+
   title = 'Title'
   text = 'Home is behind, the world ahead'
 
   textColor: string
 
   inputHandler(value) {
-    this.title = value
+    this.card.title = value
   }
 
   changeHandler() {

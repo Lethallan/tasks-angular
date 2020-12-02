@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 
+export interface Card {
+  title: string
+  text: string
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,4 +16,11 @@ export class AppComponent {
   toggleCards() {
     this.toggle = !this.toggle
   }
+
+  cards: Card[] = [
+    {title: 'Cat', text: 'This is Sparta!'},
+    {title: 'Kangaroo', text: 'Blablabla'},
+    {title: 'Happy new year', text: 'Heart-shaped box'},
+    {title: 'Master of the wind', text: 'The dawn will come'}
+  ]
 }
